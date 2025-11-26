@@ -8,10 +8,10 @@ void main()
 	void mergedata(int[],int[],int[],int,int);
 	printf(" no of elements in first array[1-20]:");
 	scanf("%d,",&n1);
-	readdata(arr1,n1);
+	readdata(arr1,n1);//input array1
 	printf(" \n no of elements in second array[1-20]:");
 	scanf("%d,",&n2);
-	readdata(arr2,n2);
+	readdata(arr2,n2);// input array2
 	sortdata(arr1,n1);
 	sortdata(arr2,n2);
 	mergedata(arr1,arr2,arr3,n1,n2);
