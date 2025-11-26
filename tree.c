@@ -120,9 +120,9 @@ struct node * delete(struct node* root,int data)
 	{
 	if(t->lchild==0 && t->rchild==0)//case of leaf node
 	{
-	if(par==0)
+	if(par==0)//only single node
 	root==0;
-	 else if (data<par->data)
+	 else if (data<par->data)//leaf with parent
 	par->lchild=0;
 	else
 	par->rchild=0;
