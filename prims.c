@@ -13,11 +13,11 @@ void main() {
         for(j = 1; j <= n; j++) {
             scanf("%d", &cost[i][j]);
             if(cost[i][j] == 0)
-                cost[i][j] = 999;//initialize non-exitent edgge with high cost
+                cost[i][j] = 999;// initialize non-exitent edgge with high cost
         }
     }
 
-    visited[1] = 1;//start with node
+    visited[1] = 1;//star with node 1
 
     printf("\n");
     while(ne < n) {//finding minimum spanning tree
@@ -31,14 +31,14 @@ void main() {
                 
                     if(visited[i] != 0 && visited[j] == 0) {
                         min = cost[i][j];
-                        u = i;//store edge with minimum cost
+                        u = i;//store with minimum cost
                         v = j;
                     }
 
         printf("\nEdge %d:(%d %d) cost:%d", ne++, u, v, min);
         mincost += min;
         visited[v] = 1;//mark v node are visited
-        cost[u][v] = cost[v][u] = 999;
+        cost[u][v] = cost[v][u] = 999;//remove edge
     }
 
     printf("\nMinimum cost = %d\n", mincost);
