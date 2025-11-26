@@ -8,7 +8,7 @@ struct node
 
 void main()
 { 
-	struct node * start=(struct node*)0;
+	struct node * start=(struct node*)0;//null
 	struct node * insert (struct node *,int);
 	struct node * search (struct node *, int);
 	struct node * delete (struct node *, int);
